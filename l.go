@@ -58,6 +58,10 @@ func BuildLogger(logLevel string) {
 }
 
 func SetLevel(logLevel string) {
+	if logLevel == "" {
+		logLevel = "debug"
+	}
+
 	switch strings.ToUpper(logLevel) {
 	case LevelDebug:
 		atomicLevel.SetLevel(zapcore.DebugLevel)
@@ -87,4 +91,3 @@ func Logger() *zap.Logger {
 
 	return logger
 }
-
