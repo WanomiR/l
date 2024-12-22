@@ -1,4 +1,4 @@
-module github.com/wanomimr/l
+module github.com/wanomir/l
 
 go 1.23.2
 
